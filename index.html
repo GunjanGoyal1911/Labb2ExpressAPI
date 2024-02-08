@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API Documentation</title>
+    <link rel="stylesheet" href="style.css">   
+    
+</head>
+
+<body>
+    <h1>Product API Documentation</h1>
+
+    <h2>GET /products</h2>
+    <p>To get all products.</p>
+    <pre><code>GET /products
+        [
+            {
+                "id": 1,
+                "name": "Apple",
+                "type": "Fruit"
+            },
+            {
+                "id": 2,
+                "name": "Orange",
+                "type": "Fruit"
+            }
+            //more products..
+        ]
+    </code>
+</pre>
+
+
+    <h2>GET /product/:id</h2>
+    <p>To get a specific product by ID.</p>
+    <pre><code>GET /product/:id
+        {
+            "id": 1,
+            "name": "Apple",
+            "type": "Fruit"
+        }
+    </code></pre>
+
+    <h2>POST /product</h2>
+    <p>Add a new product.</p>
+    <pre><code>POST /product</code></pre>
+    <p>Request Body Example:</p>
+    <pre><code>{
+        "name": "Product Name",
+        "type": "Product Type"
+    }</code></pre>
+
+
+    <h2>PUT /product/:id</h2>
+    <p>Update a product by ID.</p>
+    <pre><code>PUT /product/:id</code></pre>
+    <p>Request Body Example:</p>
+    <pre><code>{
+        "name": "Updated Product Name",
+        "type": "Updated Product Type"
+    }</code></pre>
+
+    <h2>DELETE /product/:id</h2>
+    <p>Delete a product by ID.</p>
+    <pre><code>DELETE /product/:id</code></pre>
+
+    <h2>Notes:</h2>
+    <ul>
+        <li>All endpoints communicate with the external API at https://gunjanproductapp.azurewebsites.net/.</li>
+        <li>Replace <code>{id}</code> in the URLs with the actual product ID.</li>
+    </ul>
+
+</body>
+</html> 
+
